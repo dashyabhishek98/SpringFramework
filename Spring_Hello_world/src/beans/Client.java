@@ -7,10 +7,10 @@ public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String files[] = {"resources/Engine.xml","resources/Car.xml"};
-		ApplicationContext factory = new ClassPathXmlApplicationContext(files);
-		Car c = (Car)factory.getBean("c");
-		c.print();
+		
+		ApplicationContext factory = new ClassPathXmlApplicationContext("resources/Spring.xml");
+		Test c = (Test)factory.getBean("t");
+		c.hello();
 		/*Resource r = new ClassPathResource("resources/Spring.xml");
 		BeanFactory factory = new XmlBeanFactory(r);
 		Object o =factory.getBean("t");

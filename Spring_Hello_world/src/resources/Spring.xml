@@ -3,7 +3,7 @@
 
 <beans>
 <bean id="t" class="beans.Test">
-<constructor-arg value="20" index="1"></constructor-arg>
-<constructor-arg value="MR." index="0"></constructor-arg>
+<property name="driver" value="driver"></property>
+<property name="url" value="url"></property>
 </bean>
 </beans>
