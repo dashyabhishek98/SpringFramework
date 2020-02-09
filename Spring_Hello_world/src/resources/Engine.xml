@@ -1,12 +1,6 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-<bean id="e1" class="beans.Engine">
+<bean id="e" class="beans.Engine">
 <constructor-arg value="A1006" index="0"></constructor-arg></bean>
-<bean id="e2" class="beans.Engine">
-<constructor-arg value="A1007" index="0"></constructor-arg></bean>
-<bean id="e3" class="beans.Engine">
-<constructor-arg value="A1008" index="0"></constructor-arg></bean>
-<bean id="e4" class="beans.Engine">
-<constructor-arg value="A1009" index="0"></constructor-arg></bean>
 </beans>
