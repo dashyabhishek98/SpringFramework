@@ -1,16 +1,20 @@
 package beans;
 
-public class CarFactory{
-	public String carName;
+import org.springframework.beans.factory.FactoryBean;
 
+public class CarFactory implements FactoryBean{
+	private String carName;
 	public void setCarName(String carName) {
-		this.carName=carName;		
+		this.carName=carName;
 	}
-	
-	public Car getInstance() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
-		 Car c = (Car)Class.forName(carName).newInstance();
-		 System.out.println(c);
-		 return c;
+	public Object getObject() throws Exception{
+		Car c = (Car)Class.forName(carName).newInstance();
+		return c;
 	}
-	
+	public Class getObjectType() {
+		return carName.getClass();
+	}
+	public boolean isSingleton() {
+		return true;
+	}
 }

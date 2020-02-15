@@ -5,5 +5,4 @@
 <bean id="cf" class="beans.CarFactory">
 <property name="carName" value="beans.Audi"></property>
 </bean>
-<bean id="c" factory-bean="cf" factory-method="getInstance"></bean>
 </beans>

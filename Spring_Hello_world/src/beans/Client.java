@@ -9,7 +9,7 @@ public class Client {
 		// TODO Auto-generated method stub
 		String files[] = {"resources/Spring.xml"};
 		ApplicationContext factory = new ClassPathXmlApplicationContext(files);
-		Car c = (Car)factory.getBean("c");
+		Car c = (Car)factory.getBean("cf");
 		c.drive();
 		
 	}
