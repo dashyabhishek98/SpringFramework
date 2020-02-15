@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.Calendar;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,10 +9,14 @@ public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String files[] = {"resources/Engine.xml","resources/Car.xml"};
+		String files[] = {"resources/Spring.xml"};
 		ApplicationContext factory = new ClassPathXmlApplicationContext(files);
-		Car c = (Car)factory.getBean("c");
-		c.print();
+		Calendar cal1=(Calendar)factory.getBean("c");
+		Calendar cal2=(Calendar)factory.getBean("c");
+		System.out.println(cal1==cal2);
+		Test t1 = (Test)factory.getBean("t");
+		Test t2 = (Test)factory.getBean("t");
+		System.out.println(t1==t2);
 		/*Resource r = new ClassPathResource("resources/Spring.xml");
 		BeanFactory factory = new XmlBeanFactory(r);
 		Object o =factory.getBean("t");
