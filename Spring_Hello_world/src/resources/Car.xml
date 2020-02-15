@@ -1,8 +1,0 @@
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
-"http://www.springframework.org/dtd/spring-beans.dtd">
-<beans>
-<bean id="c" class="beans.Car">
-<property name="carName" value="Alto"></property>
-<property name="engine" ref="e"></property>
-</bean>
-</beans>
