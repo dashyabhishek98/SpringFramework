@@ -1,9 +1,13 @@
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
-"http://www.springframework.org/dtd/spring-beans.dtd">
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-<bean id="t" class="beans.Test">
-<constructor-arg value="20" index="1"></constructor-arg>
-<constructor-arg value="MR." index="0"></constructor-arg>
+
+<bean id="t" class="beans.Test"/>
+<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+<property name="staticMethod" value="beans.Test.setName"></property>
+<property name="arguments">
+<list>
+<value>Abhishek</value></list></property>
 </bean>
 </beans>
